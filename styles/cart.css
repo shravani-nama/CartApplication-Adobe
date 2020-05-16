@@ -1,0 +1,49 @@
+/* .cartContainer{
+    margin-top:20px;
+}
+.items{
+    padding: 20px 0;
+    border: 1px solid #ccc;
+    margin: 0 0 20px;
+}
+.cardImg{
+    width: 16%;
+    height: 160px;
+}
+.removeGrp{
+    margin-top:20px;
+}
+#removeBtn{
+    width:20%;
+    color:#000;
+    margin:20px auto;
+    font-weight: 600;
+}
+.input-group button{
+    height: 42px;
+    width: 32px;
+    padding: 5px;
+}
+.input-group{
+    display: flex;
+}
+.ui-input-text{
+    margin-top:7px!important;
+    height: 44px;
+    width: 25%!important;
+}
+#text{
+    text-align: center;
+}
+.cardSp{
+    color:#000;
+    padding-right:15px;
+}
+.cardAp{
+    color:#a09e9e;
+    text-decoration: line-through;
+    padding-right:15px;
+}
+.cardDp{
+    color:#108002;
+} */

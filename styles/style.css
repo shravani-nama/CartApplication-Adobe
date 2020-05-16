@@ -1,0 +1,391 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif!important;
+}
+body{
+    background-color: #f7f1f1;
+    color: #800;
+}
+p{
+    color:#008;
+}
+.container{
+    width:100%;
+    max-width: 100%;
+}
+.cart_header{
+    background-color: #2874f0;
+    height:65px;
+}
+.logo{
+    height: 40px;
+    margin: 10px 20px;
+    float: left;
+}
+.iconForm{
+    float: right;
+    margin-top: 20px;
+}
+form a{
+    margin: 20px 10px;
+}
+a:hover{
+    text-decoration: none;
+}
+.cart_filter h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top:20px;
+}
+.cart_filter div{
+    padding:0;
+}
+.cart_form{
+    width:100%;
+}
+.cart_form label{
+    font-size: 16px;
+    font-weight: 500;
+    color:#8e8a8a;
+    text-align: center;
+    margin-top:10px;
+}
+.cart_form button{
+    font-size: 16px;
+    border-radius: 45px/45px;
+    background-color: #007bff;
+    color:#fff;
+    font-weight: 600;
+    box-shadow: none;
+    width:50%;
+    margin: 0 auto;
+}
+#price-min,#price-max{
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    width: fit-content;
+    margin:5px;
+}
+.ui-slider-track .ui-btn.ui-slider-handle{
+    width:20px;
+    height:25px;
+    border-radius: 50%;
+}
+.cart_sorting{
+    padding:20px;
+    display: flex;
+}
+.cart_sorting h4{
+    width:25%;
+    text-align: left;
+    font-weight: 700;
+}
+.cart_sorting a{
+    width: 20%;
+    color:#000;
+    margin:10px 0;
+}
+.active{
+    text-decoration: underline;
+    color:#074d98!important;
+}
+.mainComponent{
+    border-left:1px solid #d4d0d0;
+}
+.card{
+    padding:0;
+    margin: 30px 20px;
+    height: 400px;
+    list-style: none;
+}
+.card-img-top{
+    width:100%;
+    height: 250px;
+}
+.card-body{
+    padding:15px 0;
+    background: #f9f9f9;
+}
+.card-title{
+    text-align: left;
+    padding:10px 10px 10px 0;
+
+}
+.addToCartBtn{
+    border-radius:45px/45px;
+    background-color: #ffc107;
+    color: #3b3b46;
+    border:0;
+    margin: 10px 15%;
+    width:70%;
+    font-weight: 600;
+}
+.card_sp{
+    font-weight: 600;
+    color:#000;
+    padding-right:15px;
+}
+.card_ap{
+    color:#a09e9e;
+    text-decoration: line-through;
+    padding-right:15px;
+}
+.card_dp{
+    color:#108002;
+}
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}
+.applyBtn{
+    border-radius: 45px/45px!important;
+    background-color: #007bff!important;
+    color:#fff!important;
+    outline: none!important;
+}
+#searchbar{
+    background-color: transparent;
+    color:#fff;
+    border-bottom:1px solid #fff;
+}
+.ui-input-text{
+    display: inline-flex;
+    background-color: transparent!important;
+    border:0 !important;
+    width: 500px;
+    margin-top: 2px;
+}
+#noProducts{
+    text-align: center;
+    margin-top: 20%;
+    display: none;
+}
+.cart_quantity{
+    position: absolute;
+    right: 11px;
+    top: 7px;
+    text-align: center;
+    border-radius: 7px;
+    width: 18px;
+    height: 18px;
+    background-color: #ff6161;
+    border: 1px solid #fff;
+    font-weight: 400;
+    color: #f0f0f0;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+
+/* cart css*/
+.cartBody{
+    margin-top:20px;
+}
+.items{
+    padding: 20px 0;
+    border: 1px solid #ccc;
+    margin: 0 0 20px;
+    background-color: #fff;
+}
+.cardImg{
+    width: 16%;
+    height: 160px;
+}
+.removeGrp{
+    margin-top:20px;
+}
+#removeBtn{
+    width:20%;
+    color:#000;
+    margin:20px auto;
+    font-weight: 600;
+}
+.input-group button{
+    height: 42px;
+    width: 32px;
+    padding: 5px;
+}
+.input-group{
+    display: flex;
+}
+.inputField{
+    width:20%;
+}
+.inputField div{
+    margin-top:7px;
+    height: 44px;
+    width: 100%;
+}
+#text{
+    text-align: center;
+}
+.cardSp{
+    color:#000;
+    padding-right:15px;
+}
+.cardAp{
+    color:#a09e9e;
+    text-decoration: line-through;
+    padding-right:15px;
+}
+.cardDp{
+    color:#108002;
+}
+.priceDetails{
+    border:1px solid #ccc;
+    background-color: #fff;
+    padding:15px;
+    font-size: 20px;
+}
+.priceDetails h3{
+    color: #8b8b8e;
+}
+.priceDetails div{
+    margin:20px 0;
+}
+.totalDiv{
+    font-weight: 600;
+}
+#sortFilterMobile{
+    display: none;
+}
+.itemContent{
+    padding:0;
+    margin-top: 20px;
+}
+.footer{
+    background-color: #2874f0;
+    padding:15px 0;
+    text-align: center;
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .cart_header{
+        padding:0;
+    }
+    .logo{
+        margin-left:20px;
+    }
+    .card{
+        margin: 10px 0;
+        height: 200px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+    .card-img-top{
+        height:100px
+    }
+    .card-body{
+        padding:0
+    }
+    .cart_filter,.cart_sorting{
+        display: none;
+    }
+    #sortFilterMobile{
+        display: block;
+    }
+    .iconForm{
+        float: right;
+        padding: 0;
+    }
+    .ui-input-text{
+        width:70%;
+        margin-top: -5px;
+    }
+    #searchIcon{
+        right:17%;
+        position: absolute;
+    }
+    #cartIcon{
+        right:3%;
+        position: absolute;
+    }
+    form a{
+        margin: 0 10px;
+    }
+    #sortFilterMobile{
+        padding: 0;
+    }
+    #sortFilterMobile span{
+        margin:0;
+        padding:15px;
+        border:1px solid #ccc;
+    }
+    .container{
+        padding: 0;
+    }
+    #sortFilterMobile span:first-child{
+        text-align: right;
+    }
+    .card-deck{
+        padding: 0 1px;
+    }
+    .card{
+        height:260px;
+        margin:0;
+    }
+    .addToCartBtn{
+        width:80%;
+        margin:10px;
+    }
+    .card-body span{
+        font-size: 10px;
+        padding: 0;
+    }
+    .iconForm1{
+        margin: 20px 0 0 0;
+        text-align: right;
+    }
+    .cartBody{
+        margin:5px;
+    }
+    #cartItems{
+        padding:5px;
+    }
+    .items{
+        padding:10px;
+    }
+    .cardImg{
+        padding: 0;
+        width:30%;
+        height:120px;
+    }
+    .itemContent{
+        margin:0
+    }
+    .cardTitle{
+        margin:0;
+        margin-left:10px;
+    }
+    .cardSp,.cardAp,.cardDp{
+        font-size: 12px;
+    }
+    .cardSp{
+        margin-left: 10px;
+        font-weight: 600;
+    }
+    .input-group button{
+        border-radius: 50%!important;
+        width:30px;
+        height: 30px;
+        margin-top:10px
+    }
+    .priceDetails{
+        font-size: 14px;
+    }
+    .priceDetails h3{
+        font-size: 18px;
+    }
+    .priceDetails_price,.priceDetails_Dprice,.priceDetails_total{
+        text-align: right;
+    }
+    .priceDetails div span{
+        padding: 0;
+    }
+}
+
+

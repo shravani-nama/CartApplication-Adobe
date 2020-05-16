@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>Cart Application</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
+          rel="stylesheet"
+          id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet"
+          href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+          media="screen">
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet"
+          href="styles/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <!--Header component-->
+        <div class="row">
+            <div class="col-lg-12 col-xs-12 cart_header">
+                <img src="https://img.icons8.com/plasticine/100/000000/star--v1.png"
+                     class="logo" />
+                    <form id="demo-2" class="iconForm">
+                        
+                    <div>
+                        <input id="searchbar" onkeyup="searchItems()" type="text" name="search" placeholder="Search" class="hide"> 
+                        <a onclick="showSearchBar()" id="searchIcon">
+                            
+                            <svg class="svg-icon"
+                                 viewBox="0 0 20 20"
+                                 fill="#fff"
+                                 width="25"
+                                 height="25">
+                                <path
+                                      d="M18.125,15.804l-4.038-4.037c0.675-1.079,1.012-2.308,1.01-3.534C15.089,4.62,12.199,1.75,8.584,1.75C4.815,1.75,1.982,4.726,2,8.286c0.021,3.577,2.908,6.549,6.578,6.549c1.241,0,2.417-0.347,3.44-0.985l4.032,4.026c0.167,0.166,0.43,0.166,0.596,0l1.479-1.478C18.292,16.234,18.292,15.968,18.125,15.804 M8.578,13.99c-3.198,0-5.716-2.593-5.733-5.71c-0.017-3.084,2.438-5.686,5.74-5.686c3.197,0,5.625,2.493,5.64,5.624C14.242,11.548,11.621,13.99,8.578,13.99 M16.349,16.981l-3.637-3.635c0.131-0.11,0.721-0.695,0.876-0.884l3.642,3.639L16.349,16.981z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="cart.html" id="cartIcon">
+                            <svg class="_2fcmoV"
+                                 width="25"
+                                 height="25"
+                                 viewBox="0 0 16 16"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path class="_2JpNOH"
+                                      d="M15.32 2.405H4.887C3 2.405 2.46.805 2.46.805L2.257.21C2.208.085 2.083 0 1.946 0H.336C.1 0-.064.24.024.46l.644 1.945L3.11 9.767c.047.137.175.23.32.23h8.418l-.493 1.958H3.768l.002.003c-.017 0-.033-.003-.05-.003-1.06 0-1.92.86-1.92 1.92s.86 1.92 1.92 1.92c.99 0 1.805-.75 1.91-1.712l5.55.076c.12.922.91 1.636 1.867 1.636 1.04 0 1.885-.844 1.885-1.885 0-.866-.584-1.593-1.38-1.814l2.423-8.832c.12-.433-.206-.86-.655-.86"
+                                      fill="#fff"></path>
+                            </svg>
+                            <div class="cart_quantity" style="display:none"></div>
+                        </a >
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        <!--Header component end-->
+        <!--Main component-->
+        <div class="row">
+            <!---Filter component-->
+            <div class="col-lg-2 cart_filter">
+                <h4>Filters</h4>
+                <br />
+                <div data-role="main"
+                     class="ui-content">
+                    <form method="post" class="cart_form" onsubmit="onApply()">
+                        <div data-role="rangeslider">
+                            <input type="range"
+                                   name="price-min"
+                                   id="price-min"
+                                   value="100"
+                                   min="0"
+                                   max="10000">
+                            <input type="range"
+                                   name="price-max"
+                                   id="price-max"
+                                   value="10000"
+                                   min="0"
+                                   max="10000">
+                        </div>
+                        <label for="price-min">Price</label>
+                        <button type="submit" class="applyBtn">Apply</button>
+                    </form>
+                </div>
+            </div>
+            <!---Filter component end-->
+            <!---Products component-->
+            <div class="col-lg-10 col-xs-12 mainComponent">
+                <!--sorting-->
+                <div class="cart_sorting">
+                    <h4>Sort By</h4>
+                    <a id="sortHTL" onclick="onHTL()">Price--High to Low</a>
+                    <a id="sortLTH" onclick="onLTH()">Price--Low to High</a>
+                    <a id="sortD" onclick="onDiscount()">Discount</a>
+                </div>
+                <!--sorting end-->
+                <!---for mobile view--->
+                <div class="col-xs-12" id="sortFilterMobile">
+                    <span class="col-xs-6" data-toggle="modal" data-target="#sortModal">Sort</span>
+                    <span class="col-xs-6">Filter</span>
+                </div>
+                <!---for mobile view--->
+                <!--product display-->
+                <div class="card-deck col-lg-12">
+                </div>
+                <!--product display end-->
+            </div>
+            <!---Products component end-->
+        </div>
+        <!--Main component end-->
+        <div class="modal fade" id="sortModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+        <div class="row footer">
+            <span>&copy; copyright</span>
+        </div>
+    </div>
+    <!--Sort modal-->
+    
+    <script src="js/product.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
